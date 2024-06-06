@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<!-- Boxicons -->
+		<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+		<!-- My CSS -->
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="styleIndex.css">
+        <link rel="stylesheet" href="styleParametre.css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        
+        <!-- Chart.js -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+      <!-- My CSS -->
+      <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+		<title>GEOMATIC</title>
+	</head>
+    
+	
+<body>
+  
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		
+		<div class="logo-nav">
+			<a href="index.html" class="brand">
+				<img src="img/logo-geomatic.png" style="width: 70%;"/>
+			</a> 
+	    </div>
+
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="index.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Tableau de bord</span>
+				</a>
+			</li>
+			<li>
+				<a href="Data.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Données</span>
+				</a>
+			</li>
+			<li>
+				<a href="Projets.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Projets</span>
+				</a>
+			</li>
+			
+			<li>
+				<a href="Clients.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Clients</span>
+				</a>
+			</li>
+		
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="Parametre.html">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Paramètres</span>
+				</a>
+			</li>
+			<li>
+				<a href="Connexion.html" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Se déconnecter</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Recherche...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Paramètres</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Paramètres</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+							
+						</li>
+					</ul>
+				</div>
+        <span data-toggle="modal" data-target="#ModalAdding" class="btn-download addData" style="margin-top: 10px; margin-left: 450px;cursor: pointer">
+					<i class='bx bx-plus-circle' ></i>
+					<span class="text">Ajouter Utilisateur</span>
+				</span>
+        
+       
+        
+				
+			</div>
+
+			
+				
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h4>Paramètres</h4>
+						
+					</div>
+        
+         <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-uppercase mb-0">Gérer les Utilisateurs</h5>
+                                    </div>
+                                    <div class="table-responsive">
+                                     
+                                        <table class="table no-wrap user-table mb-0">
+                                          <thead>
+                                            <tr>
+                                                
+                                              <th scope="col" style="text-align: center;" class="border-0 text-uppercase font-medium pl-4 ">#</th>
+                                              <th scope="col" style="text-align: center;"  class="border-0 text-uppercase font-medium ">Nom</th>
+                                              <th scope="col" style="text-align: center;" class="border-0 text-uppercase font-medium ">Profession</th>
+                                              <th scope="col" style="text-align: center;" class="border-0 text-uppercase font-medium ">Email</th>
+                                              <th scope="col" style="text-align: center;" class="border-0 text-uppercase font-medium ">Date d'Ajout</th>
+                                              <th scope="col" style="text-align: center;" class="border-0 text-uppercase font-medium ">Role</th>
+                                              <th scope="col" style="text-align: center;" class="border-0 text-uppercase font-medium ">Gérer</th>
+                                                
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                
+                                              <td class="pl-4">1</td>
+                                              <td>
+                                                  <h5 class="font-medium mb-0" style="text-align: center;">Daniel Kristeen</h5>
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+
+                                                  <span class="text-muted">Fournisseur</span>
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  <span class="text-muted">daniel@website.com</span><br>
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  <span class="text-muted">15 Mar 1988</span><br>
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+                                                <select class="form-control role-select" id="exampleFormControlRole1">
+                                              
+                                                  <option>Administrateur</option>
+                                                  <option>Utilisateur</option>
+                                                </select>
+                                              </td>
+                                              <td style="text-align: center;">
+                                                <span class="status completed downdata-button" >
+                                                  <i class='bx bxs-download' style="font-size: 14px;"></i> <!-- Use the download icon class -->
+                                                </span>
+                                                <span class="status completed edit-button" style="background-color: green;" data-toggle="modal" data-target="#UpdateUtilisateurModal" onclick="populateUpdateModal(this)">
+                                                  <i class='bx bx-edit' style="font-size: 14px;"></i>
+                                                </span>
+                                                
+                                                <span class="status completed show-button" style="background-color: rgb(224, 159, 125);" data-toggle="modal" data-target="#ModalDetailUtilisateur">
+                                                  <i class='bx bx-show' style="font-size: 14px;"></i> <!-- Show icon remains unchanged -->
+                                                </span>
+                                              </td>
+                                            
+                                            </tr>
+                                            <tr>
+                                              <td class="pl-4">2</td>
+                                              <td>
+                                                  <h5 class="font-medium mb-0" style="text-align: center;">Emma Smith</h5>
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+                                                
+                                                  <span class="text-muted">Professeur</span>
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  <span class="text-muted">daniel@website.com</span><br>
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  <span class="text-muted">15 Mar 1855</span><br>
+                                                 
+                                              </td>
+                                              <td style="text-align: center;">
+                                                <select class="form-control role-select" id="exampleFormControlRole1">
+                                                 
+                                                  <option>Administrateur</option>
+                                                  <option>Utilisateur</option>
+                                                  
+                                                </select>
+                                              </td>
+                                              <td style="text-align: center;">
+                                                <span class="status completed downdata-button" >
+                                                  <i class='bx bxs-download' style="font-size: 14px;"></i> <!-- Use the download icon class -->
+                                                </span>
+                                                <span class="status completed edit-button" style="background-color: green;" data-toggle="modal" data-target="#UpdateUtilisateurModal"  onclick="populateUpdateModal(this)">
+                                                  <i class='bx bx-edit' style="font-size: 14px;"></i>
+                                                </span>
+                                                
+                                                <span class="status completed show-button" style="background-color: rgb(224, 159, 125);" data-toggle="modal" data-target="#ModalDetailUtilisateur">
+                                                  <i class='bx bx-show' style="font-size: 14px;"></i> <!-- Show icon remains unchanged -->
+                                                </span>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td class="pl-4">3</td>
+                                              <td>
+                                                  <h5 class="font-medium mb-0" style="text-align: center;">Olivia Johnson</h5>
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  
+                                                  <span class="text-muted">Directeur</span>
+                                                 
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  <span class="text-muted">daniel@website.com</span><br>
+                                                  
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  <span class="text-muted">17 Aug 1988</span><br>
+                                                 
+                                              </td>
+                                              <td style="text-align: center;">
+                                                <select class="form-control role-select" id="exampleFormControlRole1">
+                                                  
+                                                  <option>Administrateur</option>
+                                                  <option>Utilisateur</option>
+                                                  
+                                                  
+                                                </select>
+                                              </td>
+                                              <td style="text-align: center;">
+                                                <span class="status completed downdata-button" >
+                                                  <i class='bx bxs-download' style="font-size: 14px;"></i> <!-- Use the download icon class -->
+                                                </span>
+                                                <span class="status completed edit-button" style="background-color: green;" data-toggle="modal" data-target="#UpdateUtilisateurModal" onclick="populateUpdateModal(this)">
+                                                  <i class='bx bx-edit' style="font-size: 14px;"></i>
+                                                </span>
+                                                
+                                                <span class="status completed show-button" style="background-color: rgb(224, 159, 125);" data-toggle="modal" data-target="#ModalDetailUtilisateur">
+                                                  <i class='bx bx-show' style="font-size: 14px;"></i> <!-- Show icon remains unchanged -->
+                                                </span>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td class="pl-4">4</td>
+                                              <td>
+                                                  <h5 class="font-medium mb-0" style="text-align: center;">Isabella Williams</h5>
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  
+                                                  <span class="text-muted">Comptable</span>
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  <span class="text-muted">daniel@website.com</span><br>
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  <span class="text-muted">26 Mar 1999</span><br>
+                                                 
+                                              </td>
+                                              <td style="text-align: center;">
+                                                <select class="form-control role-select" id="exampleFormControlRole1">
+                                                
+                                                  <option>Administrateur</option>
+                                                  <option>Utilisateur</option>
+                                                  
+                                                </select>
+                                              </td>
+                                              <td style="text-align: center;">
+                                                <span class="status completed downdata-button" >
+                                                  <i class='bx bxs-download' style="font-size: 14px;"></i> <!-- Use the download icon class -->
+                                                </span>
+                                                <span class="status completed edit-button" style="background-color: green;" data-toggle="modal" data-target="#UpdateUtilisateurModal"  onclick="populateUpdateModal(this)">
+                                                  <i class='bx bx-edit' style="font-size: 14px;"></i>
+                                                </span>
+                                                
+                                                <span class="status completed show-button" style="background-color: rgb(224, 159, 125);" data-toggle="modal" data-target="#ModalDetailUtilisateur">
+                                                  <i class='bx bx-show' style="font-size: 14px;"></i> <!-- Show icon remains unchanged -->
+                                                </span>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td class="pl-4">5</td>
+                                              <td>
+                                                  <h5 class="font-medium mb-0" style="text-align: center;">Sophia Jones</h5>
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  
+                                                  <span class="text-muted">Directeur</span>
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  <span class="text-muted">daniel@website.com</span><br>
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  <span class="text-muted">16 Aug 2001</span><br>
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+                                                <select class="form-control role-select" id="exampleFormControlRole1">
+                                                  
+                                                  <option>Administrateur</option>
+                                                  <option>Utilisateur</option>
+                                                  
+                                                </select>
+                                              </td>
+                                              <td style="text-align: center;">
+                                                <span class="status completed downdata-button" >
+                                                  <i class='bx bxs-download' style="font-size: 14px;"></i> <!-- Use the download icon class -->
+                                                </span>
+                                                <span class="status completed edit-button" style="background-color: green;" data-toggle="modal" data-target="#UpdateUtilisateurModal"onclick="populateUpdateModal(this)" >
+                                                  <i class='bx bx-edit' style="font-size: 14px;"></i>
+                                                </span>
+                                                
+                                                <span class="status completed show-button" style="background-color: rgb(224, 159, 125);" data-toggle="modal" data-target="#ModalDetailUtilisateur">
+                                                  <i class='bx bx-show' style="font-size: 14px;"></i> <!-- Show icon remains unchanged -->
+                                                </span>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td class="pl-4">6</td>
+                                              <td>
+                                                  <h5 class="font-medium mb-0" style="text-align: center;">Charlotte Brown</h5>
+                                                  
+                                              </td>
+                                              <td >
+                                                  
+                                                  <span class="text-muted">Fournisseur</span>
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  <span class="text-muted">daniel@website.com</span><br>
+                                                 
+                                              </td>
+                                              <td style="text-align: center;">
+                                                  <span class="text-muted">15 Mar 1970</span><br>
+                                                  
+                                              </td>
+                                              <td style="text-align: center;">
+                                                <select class="form-control role-select" id="exampleFormControlRole1">
+                                               
+                                                  <option>Administrateur</option>
+                                                  <option>Utilisateur</option>
+                                                  
+                                                </select>
+                                              </td>
+                                              <td style="text-align: center;">
+                                                <span class="status completed downdata-button" >
+                                                  <i class='bx bxs-download' style="font-size: 14px;"></i> <!-- Use the download icon class -->
+                                                </span>
+                                                <span class="status completed edit-button" style="background-color: green;" data-toggle="modal" data-target="#UpdateUtilisateurModal"  onclick="populateUpdateModal(this)">
+                                                  <i class='bx bx-edit' style="font-size: 14px;"></i>
+                                                </span>
+                                                
+                                                <span class="status completed show-button" style="background-color: rgb(224, 159, 125);" data-toggle="modal" data-target="#ModalDetailUtilisateur">
+                                                  <i class='bx bx-show' style="font-size: 14px;"></i> <!-- Show icon remains unchanged -->
+                                                </span>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+					
+					
+					
+					
+				</div>
+				
+					
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+  
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal"></button>
+				</div>
+			</div>
+		</div>
+    <div class="modal fade" id="ModalAdding" tabindex="-1" role="dialog" aria-labelledby="ModalAddEntryLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalAddEntryLabel">Ajouter Utilisateur</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group row">
+              <div class="col">
+                <label for="inputNom">Nom:</label>
+                <input type="text" class="form-control" id="inputNom">
+              </div>
+              <div class="col">
+                <label for="inputProfession">Profession:</label>
+                <input type="text" class="form-control" id="inputProfession">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <label for="inputEmail">Email:</label>
+                <input type="email" class="form-control" id="inputEmail">
+              </div>
+              <div class="col">
+                <label for="inputDate">Date d'Ajout:</label>
+                <input type="date" class="form-control" id="inputDate">
+              </div>
+            <div class="form-group row">
+              <div class="col">
+                <label for="inputRole">Role:</label>
+                <input type="text" class="form-control" id="inputRole">
+              </div>
+              <div class="col">
+                <div class="col">
+                  <label for="inputMotdepasse">Mot de Passe :</label>
+                  <input type="text" class="form-control" id="inputMotdepasse">
+                </div>
+            </div>
+
+            
+            </div>
+                 
+    <!-- Modal de Modification -->
+    
+    
+<div id="ModalEdit" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Modifier mes informations</h5>
+              <button type="button" class="close custom-close-button" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <form id="editForm">
+                <div class="col">
+                  <label for="editNom">Nom:</label>
+                  <input type="text" class="form-control" id="editNom" name="editNom">
+              </div>
+              <div class="col">
+                  <label for="editPrenom">Prénom:</label>
+                  <input type="text" class="form-control" id="editPrenom" name="editPrenom">
+              </div>
+              <div class="col">
+                  <label for="currentPassword">Entrez le mot de passe actuel:</label>
+                  <input type="password" class="form-control" id="currentPassword" name="currentPassword">
+              </div>
+              <div class="col">
+                  <label for="newPassword">Saisissez le nouveau mot de passe:</label>
+                  <input type="password" class="form-control" id="newPassword" name="newPassword">
+              </div>
+              <div class="col">
+                  <label for="confirmPassword">Confirmer le mot de passe:</label>
+                  <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+              </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+              <button type="button" class="btn btn-success" id="saveChangesBtn">Enregistrer</button>
+          </div>
+      </div>
+  </div>
+</div>
+	</div>
+  
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            <button type="button" class="btn btn-primary" id="addEntryBtn">Ajouter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div> 
+  <div id="ModalDetailUtilisateur" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalDetailLabel">Détails Utilisateur</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="detailNom">Nom:</label>
+                    <p id="labelNom" class="form-control-plaintext"></p>
+                </div>
+                <div class="form-group">
+                    <label for="detailProfession">Profession:</label>
+                    <p id="labelProfession" class="form-control-plaintext"></p>
+                </div>
+                <div class="form-group">
+                    <label for="detailEmail">Email:</label>
+                    <p id="labelEmail" class="form-control-plaintext"></p>
+                </div>
+                <div class="form-group">
+                    <label for="detailDate">Date d'Ajout:</label>
+                    <p id="labelDateAjout" class="form-control-plaintext"></p>
+                </div>
+                <div class="form-group">
+                    <label for="detailRole">Rôle:</label>
+                    <p id="labelRole" class="form-control-plaintext"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<div class="modal fade" id="UpdateUtilisateurModal" tabindex="-1" role="dialog" aria-labelledby="UpdateUtilisateurModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="UpdateUtilisateurModalLabel">Modifier Utilisateur</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-md-6">
+                     <!-- Nom -->
+                      <div class="form-group">
+                          <label for="inputNomUpdate" class="col-form-label">Nom:</label>
+                          <input type="text" class="form-control" id="inputNomUpdate">
+                      </div>
+                       <!-- Profession -->
+                      <div class="form-group">
+                          <label for="inputProfessionUpdate" class="col-form-label">Profession:</label>
+                          <input type="text" class="form-control" id="inputProfessionUpdate">
+                      </div>
+                       <!-- Email -->
+                      <div class="form-group">
+                          <label for="inputEmailUpdate" class="col-form-label">Email :</label>
+                          <input type="text" class="form-control" id="inputEmailUpdate">
+                      </div>
+                        <!-- Date -->
+
+                    <div class="form-group">
+                          <label for="inputDateAjoutUpdate" class="col-form-label">Date d'Ajout:</label>
+                          <input type="date" class="form-control" id="inputDateAjoutUpdate">
+                      </div>
+                         <!-- Role -->
+                      <div class="form-group">
+                        <label for="inputRoleUpdate" class="col-form-label">Role :</label>
+                        <input type="text" class="form-control" id="inputRoleUpdate">
+
+
+                    </div>
+                  </div>
+           
+                     
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+              <button type="button" class="btn btn-success">Modifier</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+	
+	
+						
+	
+	<script src="scriptIndex.js"></script>
+	<script src="script.js"></script>
+	<script src="scriptConnexion.js"></script>
+    <script src="scriptParamètres.js"></script>
+</body>
+</html>

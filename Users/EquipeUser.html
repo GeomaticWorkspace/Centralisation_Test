@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<!-- Boxicons -->
+		<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+		<!-- My CSS -->
+		<link rel="stylesheet" href="styleUser.css">
+		<link rel="stylesheet" href="styleIndexUser.css">
+        <link rel="stylesheet" href="/Centralisation des données/scriptEquipe.js">
+		<!-- Chart.js -->
+	
+
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+		<title>GEOMATIC</title>
+	</head>
+	
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		
+		<div class="logo-nav">
+			<a href="index.html" class="brand">
+				<img src="img/logo-geomatic.png" style="width: 70%;"/>
+			</a> 
+	    </div>
+
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="indexUser.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Tableau de bord</span>
+				</a>
+			</li>
+			<li>
+				<a href="DataUser.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Données</span>
+				</a>
+			</li>
+			<li>
+				<a href="ProjetsUser.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Projets</span>
+				</a>
+			</li>
+			
+			<li>
+				<a href="ClientsUser.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Clients</span>
+				</a>
+			</li>
+			<li>
+				<a href="EquipeUser.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Equipe</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="ParametreUser.html">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Paramètres</span>
+				</a>
+			</li>
+			<li>
+				<a href="ConnexionUser.html" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Se déconnecter</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Recherche...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="img/people2.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Equipe</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="EquipeUser.html">Equipe</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+							
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<section id="team" class="section bg-gray-100">
+    <div class="container">
+        <div class="row section-heading justify-content-center text-center wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.3s; animation-delay: 0.3s; animation-name: fadeInUp;">
+            <div class="col-lg-8 col-xl-6">
+                <h3 class="h1 bg-primary-after after-50px pb-3 mb-3">Nos conseillers</h3>
+                
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 my-3 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.3s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <div class="hover-top-in text-center">
+                    <div class="overflow-hidden z-index-1 position-relative px-5"><img class="rounded-circle border border-5 border-white shadow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ45PTacrFWkLHvNuAlwQJz3SvG9wCSVSz74AxrBCOEHyiyHc7Lsj96HKLvxMG36aQldE&usqp=CAU" title="" alt=""></div>
+                    <div class="mx-2 mx-xl-3 shadow rounded-3 position-relative mt-n4 bg-white p-4 pt-6 mx-4 text-center hover-top--in">
+                        <h6 class="fw-700 dark-color mb-1">Nancy Bayers</h6><small>Developpement</small>
+                        
+                </div>
+            </div>
+           
+
+            <div class="col-lg-3 col-sm-6 my-3 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.3s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <div class="hover-top-in text-center">
+                    <div class="overflow-hidden z-index-1 position-relative px-5"><img class="rounded-circle border border-5 border-white shadow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3PF3HhdVyUwgFfGBq68Ic2puvn9RAijSchlUqEMbjzEoP-Md_V8Z5GP0pH_7KyDdY6ME&usqp=CAU" title="" alt=""></div>
+                    <div class="mx-2 mx-xl-3 shadow rounded-3 position-relative mt-n4 bg-white p-4 pt-6 mx-4 text-center hover-top--in">
+                        <h6 class="fw-700 dark-color mb-1">Nancy Bayers</h6><small>Big Data</small>
+                    
+                       
+                </div>
+            
+            </div>
+            <div class="col-lg-3 col-sm-6 my-3 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.3s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <div class="hover-top-in text-center">
+                    <div class="overflow-hidden z-index-1 position-relative px-5"><img class="rounded-circle border border-5 border-white shadow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMjHfqvzju15N8IuSgKRrU0o61k_bLqfuVND9_AVLBdvFsvTzMjvOq9h5G7lXEd1zXHek&usqp=CAU" title="" alt=""></div>
+                    <div class="mx-2 mx-xl-3 shadow rounded-3 position-relative mt-n4 bg-white p-4 pt-6 mx-4 text-center hover-top--in">
+                        <h6 class="fw-700 dark-color mb-1">Nancy Bayers</h6><small>Geographique</small>
+                        
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 my-3 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 0.3s; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <div class="hover-top-in text-center">
+                    <div class="overflow-hidden z-index-1 position-relative px-5"><img class="rounded-circle border border-5 border-white shadow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrYytmilSt1fgIbRboQVXdMVtEQKr_GA44Z6WjkpJoTT2dYc9NiZ-tDD6bKV14fz0WDBk&usqp=CAU" title="" alt=""></div>
+                    <div class="mx-2 mx-xl-3 shadow rounded-3 position-relative mt-n4 bg-white p-4 pt-6 mx-4 text-center hover-top--in">
+                        <h6 class="fw-700 dark-color mb-1">Nancy Bayers</h6><small>SIG</small>
+                        
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 my-3 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 0.3s; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <div class="hover-top-in text-center">
+                    <div class="overflow-hidden z-index-1 position-relative px-5"><img class="rounded-circle border border-5 border-white shadow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrYytmilSt1fgIbRboQVXdMVtEQKr_GA44Z6WjkpJoTT2dYc9NiZ-tDD6bKV14fz0WDBk&usqp=CAU" title="" alt=""></div>
+                    <div class="mx-2 mx-xl-3 shadow rounded-3 position-relative mt-n4 bg-white p-4 pt-6 mx-4 text-center hover-top--in">
+                        <h6 class="fw-700 dark-color mb-1">Nancy Bayers</h6><small>Reseau</small>
+                        
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 my-3 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 0.3s; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <div class="hover-top-in text-center">
+                    <div class="overflow-hidden z-index-1 position-relative px-5"><img class="rounded-circle border border-5 border-white shadow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrYytmilSt1fgIbRboQVXdMVtEQKr_GA44Z6WjkpJoTT2dYc9NiZ-tDD6bKV14fz0WDBk&usqp=CAU" title="" alt=""></div>
+                    <div class="mx-2 mx-xl-3 shadow rounded-3 position-relative mt-n4 bg-white p-4 pt-6 mx-4 text-center hover-top--in">
+                        <h6 class="fw-700 dark-color mb-1">Nancy Bayers</h6><small>GPS</small>
+                        
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 my-3 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 0.3s; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <div class="hover-top-in text-center">
+                    <div class="overflow-hidden z-index-1 position-relative px-5"><img class="rounded-circle border border-5 border-white shadow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrYytmilSt1fgIbRboQVXdMVtEQKr_GA44Z6WjkpJoTT2dYc9NiZ-tDD6bKV14fz0WDBk&usqp=CAU" title="" alt=""></div>
+                    <div class="mx-2 mx-xl-3 shadow rounded-3 position-relative mt-n4 bg-white p-4 pt-6 mx-4 text-center hover-top--in">
+                        <h6 class="fw-700 dark-color mb-1">Nancy Bayers</h6><small>SCIENCE</small>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+				
+
+				
+					
+				
+				
+				
+				
+				
+				
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+	<script src="scriptIndexUser.js"></script>
+	<script src="/Centralisation des données/script.js"></script>
+	<script src="scriptConnexionUser.js"></script>
+</body>
+</html>
